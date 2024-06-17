@@ -1,7 +1,7 @@
 NAME = a.out
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
-SRC = main.cpp Iter.cpp
+SRC = main.cpp
 OBJS = $(SRC:.cpp=.o)
 
 all: $(NAME)

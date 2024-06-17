@@ -30,26 +30,12 @@ int main(int, char**)
         }
     }
     try
-    {
-        numbers[-2] = 0;
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
-    try
-    {
-        numbers[MAX_VAL] = 0;
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
+    {numbers[-2] = 0;}
+    catch(const std::exception& e){std::cerr << e.what() << '\n';}
+    try{numbers[MAX_VAL] = 0;}
+    catch(const std::exception& e){std::cerr << e.what() << '\n';}
 
-    for (int i = 0; i < MAX_VAL; i++)
-    {
-        numbers[i] = std::rand();
-    }
+    for (int i = 0; i < MAX_VAL; i++){numbers[i] = std::rand();}
     delete [] mirror;
     std::cerr << "------------------------------" << std::endl;
     Array<int> nbr(2);
@@ -60,22 +46,16 @@ int main(int, char**)
         std::cout << nbr[1] << std::endl;
         std::cout << nbr[2] << std::endl;
     }
-    catch (const std::exception &e)
-    {
-        e.what();
-    }
+    catch (const std::exception &e){e.what();}
     std::cerr << "------------------------------" << std::endl;
     Array<int> aa(10);
     Array<int> bb(aa);
-    for (int i = 0; i < 10; i++)
-    {
-        aa[i] = i;
-    }
+    for (int i = 0; i < 10; i++){aa[i] = i;}
     for(int i = 0; i < 10; i++)
-    {
         if (aa[i] == bb[i])
             std::cout << "At i = " << aa[i] << ", aa[i] = bb[i]" << std::endl;
-    }
     // delete [] nbr;
+    std::cerr << "------------------------------" << std::endl;
+    Array<int> dd;
     return 0;
 }
