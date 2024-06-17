@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   iter.hpp                                           :+:      :+:    :+:   */
+/*   Iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qdo <qdo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 10:09:30 by qdo               #+#    #+#             */
-/*   Updated: 2024/06/17 11:43:44 by qdo              ###   ########.fr       */
+/*   Updated: 2024/06/17 19:03:28 by qdo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,15 @@ void	iter(T * add, size_t len, void (*func)(T &))
 		while (cnt < len)
 			func(add[cnt++]);
 }
+
+// template <typename T>
+// void	iter(T * add, size_t len, void (*func)(T const &))
+// {
+// 	size_t cnt = 0;
+
+// 	if (add != NULL)
+// 		while (cnt < len)
+// 			func(add[cnt++]);
+// }
 
 #endif
